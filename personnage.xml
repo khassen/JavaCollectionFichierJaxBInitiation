@@ -1,0 +1,46 @@
+
+ <?xml version="1.0"?>
+<listPerso xmlns="http://www.w3schools.com">
+		<personnage id='p1'>
+			<type>p</type>
+			<age>23</age>
+			<nbrVie>100</nbrVie>
+			<armePref>
+				<type>8</type>
+				<point>21</point>
+			</armePref>
+			<type>g</type>
+			<point>21</point>
+			<armeActif>
+				< </armeActif>
+		</personnage>
+
+		<personnage id='p2'>
+			<type>s</type>
+			<age>23</age>
+			<nbrVie>100</nbrVie>
+			<armePref>
+				<type>8</type>
+				<point>21</point>
+			</armePref>
+			<type>r</type>
+			<point>21</point>
+			<armeActif>
+				< </armeActif>
+		</personnage>
+
+		<personnage id='p3'>
+			<type>a</type>
+			<age>23</age>
+			<nbrVie>100</nbrVie>
+			<armePref>
+				<type>8</type>
+				<point>21</point>
+			</armePref>
+			<type>o</type>
+			<point>21</point>
+			<armeActif>
+				< </armeActif>
+		</personnage>
+
+	</listPerso>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.w3schools.com" xmlns="http://www.w3schools.com"
+	elementFormDefault="qualified">
+
+	<!-- créer un element complexe type -->
+	<xs:element name="listPerso">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="personnage" minOccurs="1" maxOccurs="10" />
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="personnage">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="type" type="xs:string" minOccurs="1" />
+				<xs:element name="nbrVie" type="xs:int" minOccurs="1" />
+				<xs:element name="age" type="xs:int" />
+				<xs:element name="armeActif" type="arme" />
+				<xs:element name="armeAPref" type="arme" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:complexType name="arme">
+		<xs:sequence>
+			<xs:element name="type" type="xs:string" minOccurs="1" />
+			<xs:element name="point" type="xs:int" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+</xs:schema>

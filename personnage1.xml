@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:listPerso xmlns:p="http://www.w3schools.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.w3schools.com personnage.xsd ">
+	<p:personnage>
+		<p:type>p:type</p:type>
+		<p:nbrVie>0</p:nbrVie>
+		<p:age>0</p:age>
+		<p:armeActif>
+			<p:type>p:type</p:type>
+			<p:point>0</p:point>
+		</p:armeActif>
+		<p:armeAPref>
+			<p:type>p:type</p:type>
+			<p:point>0</p:point>
+		</p:armeAPref>
+	</p:personnage>
+</p:listPerso>

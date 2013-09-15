@@ -1,0 +1,35 @@
+1-creation de la base:
+*create table client(codecl int not null auto_increment, nomcl varchar(250), adresse varchar(255), ville varchar(255), primary key(codecl));
+
+*create table contrat(nocontrat int not null auto_increment, date_contrat date, date_enlevement date, date_retour date, codecl int, noimmatriculation int, primary key(nocontrat));
+
+* create table voiture(noimmatriculation int not null auto_increment, marque varchar(255), modele varchar(255), couleur varchar(22), cumul_reparation varchar(450), disponible varchar(225), code_type int, primary key (noimmatriculation));  
+Query OK, 0 rows affected (0.02 sec)
+
+*create table type_voiture( code_type int  not null auto_increment, description_type varchar(255), places int, prix_jour int, primary key (code_type))
+
+*create table reparation(num_rep int not null auto_increment, date_rep date,description_panne varchar(255), noimmatriculation int, primary key (num_rep));
+Query OK, 0 rows affected (0.02 sec)
+
+* create table reparations(num_rep int not null auto_increment, date_rep date,description_panne varchar(255), noimmatriculation int, primary key (num_rep), constraint noimmatriculation foreign key(noimmatriculation) references voiture(noimmatriculation));
+Query OK, 0 rows affected (0.02 sec)
+
+*mysql> create table suplements(codesuplement int not null auto_increment, libelle_supp varchar(255), tarif_jour int, primary key (codesuplement));
+Query OK, 0 rows affected (0.03 sec)
+
+*rajout des cles etrangeres:
+alter table contrat add constraint codecl foreign key (codecl) references client(codecl);
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table contrat add constraint noimmatriculation foreign key(noimmatriculation)  references voiture(noimmatriculation);
+
+*alter table contrat add constraint codecl foreign key (codecl) references client(codecl);
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table contrat add constraint noimmatriculation foreign key(noimmatriculation)  references voiture(noimmatriculation);
+
+*
+create table reparations(num_rep int not null auto_increment, date_rep date,description_panne varchar(255), noimmatriculation int, primary key (num_rep), constraint noimmatriculation foreign key(noimmatriculation) references voiture(noimmatriculation));
+
